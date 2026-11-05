@@ -130,3 +130,6 @@ function buildMessages(input: PlanInput, studyDays: number, hasReviewDay: boolea
     { role: "user" as const, content: user },
   ] as { role: "system" | "user" | "assistant"; content: string }[];
 }
+
+// Vercel에서 AI 응답을 기다리는 시간(최대 약 37초)이 기본 제한(10초)을 넘지 않도록 60초로 늘린다.
+export const maxDuration = 60;

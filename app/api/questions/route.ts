@@ -59,3 +59,6 @@ export async function POST(request: Request) {
     return Response.json({ error: "문제가 생겼어요. 잠시 후 다시 시도해 주세요." }, { status: 500 });
   }
 }
+
+// Vercel에서 AI 응답을 기다리는 시간(최대 약 37초)이 기본 제한(10초)을 넘지 않도록 60초로 늘린다.
+export const maxDuration = 60;
