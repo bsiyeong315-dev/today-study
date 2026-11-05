@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* 기본 색상 (밝은 화면 기준) */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+/* 한글이 잘 보이는 기기 기본 글꼴을 쓴다 (Windows: 맑은 고딕, Mac: 애플 SD 산돌고딕 Neo) */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+}
